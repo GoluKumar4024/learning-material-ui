@@ -76,6 +76,7 @@ const SignUpForm = () => {
                   helperText={input.helperText}
                   value={input.value}
                   onChange={_onChange}
+                  variant="outlined"
                 />
               </Grid>
             ))}
