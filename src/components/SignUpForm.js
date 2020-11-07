@@ -45,6 +45,10 @@ const SignUpForm = () => {
     },
   ]);
 
+
+  const [username,setUsername]=useState("");
+  const [password,setPassword]=useState("");
+
   const _onChange = ({ target: { id, value } }) => {
     const newInputs = [...inputs];
     const index = inputs.findIndex((input) => input.id === id);
@@ -80,6 +84,27 @@ const SignUpForm = () => {
                 />
               </Grid>
             ))}
+            <Grid item key="password">
+              <TextField
+                  id="username"
+                  label="User Name"
+                  autocomplete="username"
+                  InputProps={{name:'username'}}
+                  value={username}
+                  onChange={e=>setUsername(e.target.value)}
+                  />
+            </Grid>
+            <Grid item key="password">
+              <TextField
+                  id="password"
+                  type="password"
+                  label="Password"
+                  autocomplete="current-password"
+                  InputProps={{name:'username'}}
+                  value={password}
+                  onChange={e=>setPassword(e.target.value)}
+                  />
+            </Grid>
           </Paper>
         </Grid>
       </Grid>
